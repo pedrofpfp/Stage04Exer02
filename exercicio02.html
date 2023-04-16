@@ -1,0 +1,63 @@
+<script>
+  let alunos = [5];
+  alunos = [
+    {
+      nome: 'Pedro',
+      notaP1: 5,
+      notaP2: 9,
+      mediaP1P2: '',
+      status: ''
+    },
+    {
+      nome: 'Marcos',
+      notaP1: 5,
+      notaP2: 4,
+      mediaP1P2: '',
+      status: ''
+    },
+    {
+      nome: 'Carlos',
+      notaP1: 8,
+      notaP2: 9,
+      mediaP1P2: '',
+      status: ''
+    },
+    {
+      nome: 'Vitor',
+      notaP1: 10,
+      notaP2: 7,
+      mediaP1P2: '',
+      status: ''
+    },
+    {
+      nome: 'Ronaldo',
+      notaP1: 9,
+      notaP2: 2,
+      mediaP1P2: '',
+      status: ''
+    }
+
+  ]
+  function calcMedia() {
+    for (let i = 0; i < 5; i++) {
+      let media = (alunos[i].notaP1 + alunos[i].notaP2) / 2
+      alunos[i].mediaP1P2 = media
+      if (media >= 7) {
+        alunos[i].status = "Parabéns você conseguiu !"
+      }
+      else {
+        alunos[i].status = "Não foi dessa vez, tente novamente !"
+      }
+    }
+  }
+  calcMedia()
+  function showMedia() {
+    for (let i = 0; i < 5; i++) {
+      alert(`A média do(a) aluno(a) ${alunos[i].nome} é: ${alunos[i].mediaP1P2}\n${alunos[i].status}`)
+    }
+  }
+  showMedia()
+
+
+
+</script>
